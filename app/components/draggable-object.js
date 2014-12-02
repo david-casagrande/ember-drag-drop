@@ -13,7 +13,7 @@ export default Ember.Component.extend({
 
   handleDragStart: function(event) {
     log("handleDragStart");
-
+console.log('sup');
     var dataTransfer = event.dataTransfer;
 
     var obj = this.get('content');
@@ -26,6 +26,7 @@ export default Ember.Component.extend({
   }.on("dragStart", "touchStart"),
 
   handleDragEnd: function() {
+console.log('peace');
     log("handleDragEnd");
     this.set('content.isDraggingObject',false);
     this.set('isDraggingObject',false);

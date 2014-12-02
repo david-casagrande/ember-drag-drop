@@ -108,7 +108,7 @@ var Droppable = Ember.Mixin.create({
     // TODO: might not need this? I can't remember why its here
     event.stopPropagation();
     return false;
-  }.on('drop'),
+  }.on('drop', 'touchEnd'),
 
   /**
    * Tells the browser we have an acceptable drag event.
@@ -158,4 +158,3 @@ window.addEventListener('dragstart', function(event) {
 }, true);
 
 export default Droppable;
-
